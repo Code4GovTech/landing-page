@@ -1,5 +1,5 @@
 import React from "react";
-
+import {communityData} from "../constants/index"
 const CommunityPartners = () => {
   return (
     <div className="home">
@@ -22,7 +22,7 @@ const CommunityPartners = () => {
           <p className="mt-10 font-mono-medium text-white xl:px-24 text-center text-[16px] md:text-[22px] ">
             Here is a glimpse of the program from 2022 & 2023!
           </p> */}
-          <div className="px-5 md:px-0 grid grid-cols-1 md:grid md:grid-cols-5 gap-12 container mx-auto">
+          {/* <div className="px-5 md:px-0 grid grid-cols-1 md:grid md:grid-cols-5 gap-12 container mx-auto">
             <div className="bg-white px-4 py-4 h-100 flex justify-center items-center">
               <img
                 src="/images/DPGA.svg"
@@ -36,12 +36,23 @@ const CommunityPartners = () => {
               <img src="/images/oni.jpg" className="self-center h-100" />
             </div>
             <div className="bg-white px-4 py-4 h-100 flex justify-center items-center">
-              <img src="/images/bmgf.png" className="self-center h-100" />
+              <img src="/images/bmgf.png" alt="image bmgf"className="self-center h-100" />
             </div>
             <div className="bg-white px-4 py-4 h-100 flex justify-center items-center">
-              <img src="/images/Samagra.png" className="self-center h-100" />
+              <img src="/images/Samagra.png"  alt="Image"className="self-center h-100" />
             </div>
-          </div>
+          </div> */}
+          {/* Modified code above code by Lahu19 */}
+          <div className="px-5 md:px-0 grid grid-cols-1 md:grid md:grid-cols-5 gap-12 container mx-auto">
+          {communityData.map((card, index) => (
+                <div className="bg-white px-4 py-4 h-100 flex justify-center items-center">
+                  <img
+                src={card.imageUrl}
+                className="self-center h-100 md:mx-10"
+              />
+              </div>
+            ))}
+            </div>
         </div>
       </div>
     </div>

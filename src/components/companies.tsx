@@ -1,6 +1,6 @@
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from "react-responsive-carousel";
-
+import {companiesData} from "../constants/index"
 const Companies = () => {
   return (
     <div className="impact py-20">
@@ -11,7 +11,7 @@ const Companies = () => {
         <img src="/images/separator.png" />
       </div>
       <div className="px-5 md:px-0 grid grid-cols-2 md:grid md:grid-cols-4 lg:grid lg:grid-cols-5 gap-5 container mx-auto">
-        <img src="/images/organisations/avanti.png" />
+        {/* <img src="/images/organisations/avanti.png" />
         <img src="/images/organisations/dhiway.png" />
         <img src="/images/organisations/digital-green.png" />
         <img src="/images/organisations/egov.png" />
@@ -30,7 +30,10 @@ const Companies = () => {
         <img src="/images/organisations/tekdi.png" />
         <img src="/images/organisations/thoughtworks.png" />
         <img src="/images/organisations/tibil.png" />
-        <img src="/images/organisations/trustin.png" />
+        <img src="/images/organisations/trustin.png" /> */}
+        {companiesData.map((data, index) => (
+          <img src={data.imageUrl} alt="organisations logo image" />
+           ))}
       </div>
     </div>
   );

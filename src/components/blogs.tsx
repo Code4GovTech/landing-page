@@ -5,7 +5,7 @@ const Blogs = () => {
         Community Events
       </h1>
       <div className="container mx-auto w-[30vw] pb-10 md:pb-20">
-        <img src="/images/separator.png" />
+        <img src="/images/separator.png"  alt="Separator line image" />
       </div>
       <div className="tech-slideshow">
         <div className="mover-1"></div>
